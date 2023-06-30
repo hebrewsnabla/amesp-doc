@@ -1,17 +1,12 @@
-<div align="left">
-  <img src="https://github.com/pyscf/pyscf-doc/blob/master/logo/pyscf-logo.png" height="80px"/>
-</div>
 
-PySCF website and documentation
+Amesp website and documentation
 ===============================
 
 ## Overview
 
-The PySCF website and documentation are written in a combination of Markdown and
+The Amesp website and documentation are written in a combination of Markdown and
 reStructuredText, using `sphinx-doc` and several associated extensions to
-generate static `html` files that are served from the `gh-pages` branch.  Pushes
-to this repository trigger a Github Action that builds and serves the updated
-website.
+generate static `html` files. 
 
 ## Building the docs locally
 
@@ -25,12 +20,6 @@ Pip install the following packages, which are also listed in `requirements.txt`:
 - sphinxcontrib-bibtex
 - nbsphinx
 
-If you have multiple versions of PySCF on your machine and you would like so use
-a specific version, set `PYTHONPATH` to include the specific PySCF source
-directory you want; otherwise, uncomment
-`sys.path.append(os.path.abspath('path_to_pyscf'))` in
-[source/conf.py](source/conf.py).
-
 ### Building
 All sphinx related sources files (i.e. `.rst` and `.md`) are contained in `source` and all webpage files (once they're generated) live in the `build`.
 
@@ -39,14 +28,6 @@ If you are running on Linux, and you want to build faster you can use `make html
 
 ```bash
 make html
-```
-
-To generate the complete website (including the API docs) run the following from the main project directory.
-Since the API docs are large, this build is noticeably slower than just generating the website with `make html`.
-:warning: PySCF must be accessible in your current Python environment when you run `make api_docs` or `make html_full`.
-
-```bash
-make html_full
 ```
 
 To see more of the options you can use with `make`, just use `make help`.
